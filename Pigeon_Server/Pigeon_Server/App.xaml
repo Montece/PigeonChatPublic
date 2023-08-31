@@ -1,0 +1,9 @@
+﻿<Application x:Class="Pigeon_Server.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Pigeon_Server"
+             StartupUri="ServerWindow.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

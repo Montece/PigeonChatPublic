@@ -1,0 +1,53 @@
+﻿<Window x:Class="Pigeon_Server.ServerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Server" Height="719.7" Width="1280"
+        WindowStyle="None" BorderThickness="0"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        FontFamily="Palatino" Background="#303030" Foreground="#a4b5a4"
+        Closing="ServerWindow_Closing" Closed="Window_Closed" Loaded="Window_Loaded"
+        MouseDown="Window_MouseDown">
+    <Grid>
+        <TabControl Name="Tabs" HorizontalAlignment="Left" Height="480" VerticalAlignment="Top" Width="1252" Margin="10,203,0,0">
+            <TabItem Header="Home">
+                <Grid>
+                    <TextBox Name="Log" BorderBrush="#00C10000" BorderThickness="4" IsReadOnly="True" HorizontalAlignment="Left" Height="406" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="1224" Margin="10,6,0,0" Background="#00D4D4D4" Foreground="#FFD4D4D4"/>
+                    <Button Name="Send" Content="Отправить" HorizontalAlignment="Left" VerticalAlignment="Top" Width="131" Margin="1101,417,0,0" Height="23" Background="#FFD4D4D4" BorderBrush="Black" Foreground="Black" Click="Send_Click"/>
+                    <TextBox Name="Command" HorizontalAlignment="Left" Height="23" Margin="10,417,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="1086" Background="#FFD4D4D4" Foreground="Black"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Statistics">
+
+            </TabItem>
+            <TabItem Header="Users">
+                <Grid>
+                    <ListBox Name="UsersList" Background="#00D4D4D4" Foreground="#FFD4D4D4" HorizontalAlignment="Left" Height="430" VerticalAlignment="Top" Width="294" Margin="10,10,0,0" SelectionChanged="UsersList_SelectionChanged"/>
+                    <Label Name="UserInfo" Foreground="#FFD4D4D4" Content="Label" FontSize="20" Margin="309,10,490,10"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Servers">
+                <Grid>
+                    <ListBox Name="ServersList" Background="#00D4D4D4" Foreground="#FFD4D4D4" HorizontalAlignment="Left" Height="430" VerticalAlignment="Top" Width="294" Margin="10,10,0,0" SelectionChanged="ServersList_SelectionChanged"/>
+                    <Label Name="ServersInfo" Foreground="#FFD4D4D4" Content="Label" FontSize="20" Margin="309,10,490,10"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <Label Name="ServerTitle" Content="Pigeon Server v. " Foreground="#a4b5a4" FontSize="50" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" HorizontalAlignment="Center" Margin="26,10,18,0" VerticalAlignment="Top" Height="118" Width="1236" FontWeight="Bold"/>
+        <Image Name="Home" Source="Resources/Button_Background_1.png" HorizontalAlignment="Left" Margin="26,128,0,0" VerticalAlignment="Top" Width="70" Height="70"/>
+        <Image Name="Home_icon" Source="Resources/Menu_icon.png" HorizontalAlignment="Left" Height="70" Margin="26,128,0,0" VerticalAlignment="Top" Width="70" Stretch="Fill" MouseDown="Home_MouseDown" MouseEnter="Home_MouseEnter" MouseLeave="Home_MouseLeave"/>
+        <Image Name="Statistics" Source="Resources/Button_Background_1.png" HorizontalAlignment="Left" Margin="150,128,0,0" VerticalAlignment="Top" Width="70" Height="70"/>
+        <Image Name="Statistics_icon" Source="Resources/Statistics_icon.png" HorizontalAlignment="Left" Height="70" Margin="150,128,0,0" VerticalAlignment="Top" Width="70" Stretch="Fill" MouseDown="Statistics_MouseDown" MouseEnter="Statistics_MouseEnter" MouseLeave="Statistics_MouseLeave"/>
+        <Image Name="UsersTab" Source="Resources/Button_Background_1.png" HorizontalAlignment="Left" Margin="274,128,0,0" VerticalAlignment="Top" Width="70" Height="70"/>
+        <Image Name="UsersTab_icon" Source="Resources/UsersTab_icon.png" HorizontalAlignment="Left" Height="70" Margin="274,128,0,0" VerticalAlignment="Top" Width="70" Stretch="Fill" MouseDown="UsersTab_MouseDown" MouseEnter="UsersTab_MouseEnter" MouseLeave="UsersTab_MouseLeave"/>
+        <Image Name="ServersTab" Source="Resources/Button_Background_1.png" HorizontalAlignment="Left" Margin="398,128,0,0" VerticalAlignment="Top" Width="70" Height="70"/>
+        <Image Name="ServersTab_icon" Source="Resources/ServersTab_icon.png" HorizontalAlignment="Left" Height="70" Margin="398,128,0,0" VerticalAlignment="Top" Width="70" Stretch="Fill" MouseDown="ServersTab_MouseDown" MouseEnter="ServersTab_MouseEnter" MouseLeave="ServersTab_MouseLeave"/>
+        <Image Name="Exit" Source="Resources/Button_Background_1.png" HorizontalAlignment="Left" Margin="1192,133,0,0" VerticalAlignment="Top" Width="70" Height="70"/>
+        <Image Name="Exit_icon" Source="Resources/Exit_icon.png" HorizontalAlignment="Left" Height="70" Margin="1192,133,0,0" VerticalAlignment="Top" Width="70" Stretch="Fill" MouseDown="Exit_MouseDown" MouseEnter="Exit_MouseEnter" MouseLeave="Exit_MouseLeave"/>
+        <Image Name="Reload" Source="Resources/Button_Background_1.png" HorizontalAlignment="Left" Margin="1102,133,0,0" VerticalAlignment="Top" Width="70" Height="70"/>
+        <Image Name="Reload_icon" Source="Resources/Reload_icon.png" HorizontalAlignment="Left" Height="70" Margin="1102,133,0,0" VerticalAlignment="Top" Width="70" Stretch="Fill" MouseDown="Reload_MouseDown" MouseEnter="Reload_MouseEnter" MouseLeave="Reload_MouseLeave"/>
+    </Grid>
+</Window>
